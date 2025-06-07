@@ -279,7 +279,6 @@ async function processAccounts(privateKeys, messages, accountProxies, chatCount,
     console.log(chalk.cyan(` ┊ ${proxy ? `Menggunakan proxy: ${proxy}` : 'Tidak menggunakan proxy'}`));
 
     let userAgent = USER_AGENTS[Math.floor(Math.random() * USER_AGENTS.length)];
-
     let sessionState = {
       idToken: null,
       refreshToken: null,
@@ -362,7 +361,7 @@ async function processAccounts(privateKeys, messages, accountProxies, chatCount,
               5,
               'Getting Chat Statistic'
             );
-            console.log(chalk.cyan(` ┊ │ 📋 Chat Daily Usage: ${updatedStats.daily_message_count}/${updatedStats.daily_message_limit}`));
+            console.log(chalk.cyan(` ┊ │ Chat Daily Usage: ${updatedStats.daily_message_count}/${updatedStats.daily_message_limit}`));
             sessionState.retry403Count = 0;
             consecutive403Failures = 0;
             chatSuccess = true;
