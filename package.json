@@ -1,0 +1,25 @@
+{
+  "name": "NT EXHAUST - BITQUANT AUTO BOT",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@solana/web3.js": "^1.98.2",
+    "axios": "^1.9.0",
+    "bs58": "^6.0.0",
+    "chalk": "^5.4.1",
+    "figlet": "^1.8.1",
+    "https-proxy-agent": "^7.0.6",
+    "moment-timezone": "^0.5.48",
+    "ora": "^8.2.0",
+    "socks-proxy-agent": "^8.0.5",
+    "tweetnacl": "^1.0.3"
+  }
+}
