@@ -153,7 +153,7 @@ async function verifySignature(address, message, signature, proxy, baseHeaders) 
       config.httpAgent = new HttpsProxyAgent(proxy);
       config.httpsAgent = new HttpsProxyAgent(proxy);
     }
-    const response = await axios.post('https://quant-api.opengradient.ai/api/verify/solana', payload, config);
+    const response = await axios.post('https://quant-api.opengradient.ai/api/v2/agent/run', payload, config);
     return response.data.token;
   } catch (err) {
     throw err;
@@ -220,7 +220,7 @@ async function sendChat(accessToken, context, message, proxy, baseHeaders) {
       config.httpAgent = new HttpsProxyAgent(proxy);
       config.httpsAgent = new HttpsProxyAgent(proxy);
     }
-    const response = await axios.post('https://quant-api.opengradient.ai/api/agent/run', payload, config);
+    const response = await axios.post('https://quant-api.opengradient.ai/api/v2/agent/run', payload, config);
     return response.data.message;
   } catch (err) {
     throw err;
